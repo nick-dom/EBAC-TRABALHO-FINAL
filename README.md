@@ -11,12 +11,9 @@ Portfólio profissional construído em React + Vite, apresentado como um
 próprias de Sobre, Projetos, Habilidades e Contato. Trabalho final do
 curso EBAC.
 
-**🔗 Portfólio no ar:** _
+**🔗 Portfólio no ar:**  https://ebac-trabalho-final.vercel.app
 
-> 📘 Também existe um **[GUIA-DO-PROJETO.md](./GUIA-DO-PROJETO.md)**
-> neste repositório — um documento explicando em detalhe como cada
-> parte do projeto funciona, pensado para você (não para quem for
-> avaliar a entrega).
+
 
 ## Índice
 
