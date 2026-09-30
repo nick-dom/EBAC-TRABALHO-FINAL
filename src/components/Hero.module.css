@@ -1,0 +1,158 @@
+.hero {
+  padding: var(--sp-8) var(--sp-5) var(--sp-7);
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--sp-7);
+  align-items: center;
+}
+
+.name {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--sp-3);
+}
+
+.tagline {
+  font-size: var(--fs-md);
+  color: var(--ink-dim);
+  margin-bottom: var(--sp-4);
+}
+
+.summary {
+  max-width: 34rem;
+  color: var(--ink-dim);
+  margin-bottom: var(--sp-6);
+}
+
+.ctaRow {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-3) var(--sp-5);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    filter var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.btnPrimary {
+  background: var(--amber);
+  color: #14100a;
+}
+
+.btnPrimary:hover {
+  filter: brightness(1.08);
+}
+
+.btnGhost {
+  border: 1px solid var(--border-strong);
+  color: var(--ink);
+}
+
+.btnGhost:hover {
+  border-color: var(--teal);
+  color: var(--teal-strong);
+}
+
+/* --- Terminal decorativo --- */
+
+.terminal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+  opacity: 0.6;
+}
+
+.terminalPath {
+  margin-left: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+}
+
+.terminalBody {
+  padding: var(--sp-5);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  min-height: 9rem;
+}
+
+.linhaComando {
+  color: var(--teal-strong);
+  margin-bottom: var(--sp-2);
+}
+
+.linhaComando::before {
+  content: '';
+}
+
+.linhaSaida {
+  color: var(--ink-dim);
+  margin-bottom: var(--sp-4);
+  padding-left: var(--sp-3);
+}
+
+.cursor,
+.cursorParado {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.1em;
+  background: var(--amber);
+  vertical-align: text-bottom;
+}
+
+.cursor {
+  animation: piscar 1s steps(1) infinite;
+}
+
+.cursorParado {
+  animation: piscar 1.1s steps(1) infinite;
+}
+
+@keyframes piscar {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal {
+    order: -1;
+  }
+}

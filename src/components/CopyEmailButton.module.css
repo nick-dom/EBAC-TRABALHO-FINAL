@@ -1,0 +1,19 @@
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-2) var(--sp-4);
+  font-size: var(--fs-sm);
+  color: var(--ink);
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.botao:hover {
+  border-color: var(--teal);
+  color: var(--teal-strong);
+}

@@ -1,0 +1,11 @@
+.intro {
+  color: var(--ink-dim);
+  max-width: 40rem;
+  margin-bottom: var(--sp-6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--sp-5);
+}

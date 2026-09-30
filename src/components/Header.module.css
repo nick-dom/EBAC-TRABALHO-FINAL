@@ -1,0 +1,129 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.bar {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--sp-3) var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.brandEmblem {
+  height: 1.9rem;
+  width: auto;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.55));
+}
+
+.brandText {
+  font-family: var(--font-mono);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.navDesktop {
+  flex: 1;
+}
+
+.navList {
+  display: flex;
+  gap: var(--sp-5);
+}
+
+.navLink {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-dim);
+  text-decoration: none;
+  padding: var(--sp-1) 0;
+  border-bottom: 2px solid transparent;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--ink);
+}
+
+.navLinkActive {
+  color: var(--amber-strong);
+  border-color: var(--amber);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-left: auto;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--ink);
+}
+
+.navMobile {
+  border-top: 1px solid var(--border);
+  padding: var(--sp-3) var(--sp-5) var(--sp-4);
+}
+
+.navMobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.navLinkMobile {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-md);
+  color: var(--ink);
+  text-decoration: none;
+  padding: var(--sp-3) var(--sp-2);
+  border-radius: var(--radius-sm);
+}
+
+.navLinkMobile:hover,
+.navLinkMobile:focus-visible {
+  background: var(--surface);
+}
+
+.navLinkMobileActive {
+  color: var(--amber-strong);
+  background: var(--surface);
+}
+
+@media (max-width: 720px) {
+  .navDesktop {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}

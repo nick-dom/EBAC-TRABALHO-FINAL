@@ -1,0 +1,37 @@
+.section {
+  padding: var(--sp-8) var(--sp-5);
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 4.5rem;
+}
+
+.inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--sp-6);
+  max-width: 40rem;
+}
+
+.command {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+  margin: 0 0 var(--sp-2);
+}
+
+.prompt {
+  color: var(--teal);
+}
+
+.title {
+  font-size: var(--fs-xl);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--sp-7) var(--sp-4);
+  }
+}

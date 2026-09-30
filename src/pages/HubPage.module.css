@@ -1,0 +1,164 @@
+/* --- Tela de carregamento --- */
+
+.loading {
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-5);
+  padding: var(--sp-6);
+}
+
+.loadingLogo {
+  width: min(320px, 70vw);
+  height: auto;
+}
+
+.loadingBarTrack {
+  width: min(320px, 70vw);
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.loadingBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--amber), var(--teal-strong));
+  transition: width 0.12s ease;
+}
+
+.loadingLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+}
+
+/* --- Menu principal --- */
+
+.hub {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--sp-7) var(--sp-5) var(--sp-8);
+}
+
+.title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-8);
+}
+
+.wordmark {
+  width: min(420px, 80vw);
+  height: auto;
+}
+
+.emblemWatermark {
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  max-width: 140%;
+  opacity: 0.06;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.name {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  color: var(--ink-dim);
+  font-size: var(--fs-md);
+}
+
+.summary {
+  max-width: 34rem;
+  color: var(--ink-dim);
+}
+
+.menuLabel {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+  margin-bottom: var(--sp-5);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-4);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  text-decoration: none;
+  color: var(--ink);
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--amber);
+  box-shadow: var(--glow-violet);
+}
+
+.cardNumber {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--amber-strong);
+}
+
+.cardTitle {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+.cardDesc {
+  font-size: var(--fs-sm);
+  color: var(--ink-dim);
+}
+
+.cardArrow {
+  position: absolute;
+  bottom: var(--sp-4);
+  right: var(--sp-5);
+  color: var(--amber);
+  font-size: var(--fs-lg);
+  transition: transform var(--transition-fast);
+}
+
+.card:hover .cardArrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .cardArrow {
+    transform: none;
+  }
+}

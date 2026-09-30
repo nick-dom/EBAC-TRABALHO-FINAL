@@ -1,0 +1,39 @@
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--sp-7) var(--sp-5) var(--sp-8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+
+.languages {
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-5);
+}
+
+.languagesLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+  margin-bottom: var(--sp-3);
+}
+
+.languagesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.languageTag {
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  color: var(--amber-strong);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.25rem var(--sp-3);
+}

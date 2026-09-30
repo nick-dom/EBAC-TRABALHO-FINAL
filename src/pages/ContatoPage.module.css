@@ -1,0 +1,85 @@
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--sp-7) var(--sp-5) var(--sp-8);
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--sp-4);
+  max-width: 40rem;
+  margin-bottom: var(--sp-4);
+}
+
+.channelCard {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4) var(--sp-5);
+  text-decoration: none;
+  color: var(--ink);
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.channelCard:hover {
+  transform: translateY(-2px);
+}
+
+.whatsapp:hover {
+  border-color: #25d366;
+}
+
+.gmail:hover {
+  border-color: var(--amber);
+}
+
+.pixelIcon {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  flex-shrink: 0;
+}
+
+.channelInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.channelLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+}
+
+.channelValue {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copyRow {
+  margin-bottom: var(--sp-7);
+}
+
+.formSection {
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-6);
+}
+
+.formLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+  margin-bottom: var(--sp-4);
+}

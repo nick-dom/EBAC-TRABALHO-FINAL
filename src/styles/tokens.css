@@ -1,0 +1,91 @@
+/**
+ * Tokens de design do portfólio — tema "lobo cósmico" (roxo/prata),
+ * derivado das cores reais do emblema e do logotipo HUSKYN.
+ *
+ * As variáveis mantêm os nomes originais (--amber, --teal) por
+ * conveniência interna, mas agora representam violeta e prata.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Superfícies */
+  --bg: #0c0a13;
+  --surface: #16111f;
+  --surface-2: #1e1830;
+  --border: rgba(216, 213, 224, 0.12);
+  --border-strong: rgba(216, 213, 224, 0.26);
+
+  /* Texto */
+  --ink: #f1eef7;
+  --ink-dim: #b6afc9;
+  --ink-faint: #7c7690;
+
+  /* Acentos — violeta (energia) e prata (metal) */
+  --amber: #a855f7;
+  --amber-strong: #c586ff;
+  --teal: #cbd0d8;
+  --teal-strong: #eef0f4;
+  --danger: #f0596a;
+  --danger-bg: rgba(240, 89, 106, 0.12);
+  --success: #6ee7a8;
+
+  /* Tipografia */
+  --font-body: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.15rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2.1rem;
+  --fs-2xl: clamp(2.4rem, 5vw + 1rem, 4rem);
+
+  /* Espaçamento */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --content-width: 72rem;
+
+  --transition-fast: 0.15s ease;
+  --transition-med: 0.3s ease;
+
+  /* Brilho violeta usado em bordas/glow de elementos "de jogo" */
+  --glow-violet: 0 0 0 1px rgba(168, 85, 247, 0.4), 0 0 24px rgba(168, 85, 247, 0.25);
+}
+
+/**
+ * Tema claro: papel/pergaminho neutro com acentos violeta escurecidos
+ * para manter contraste — não é apenas o escuro invertido.
+ */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f4f1f8;
+  --surface: #ffffff;
+  --surface-2: #ece6f4;
+  --border: rgba(25, 18, 36, 0.1);
+  --border-strong: rgba(25, 18, 36, 0.22);
+
+  --ink: #18121f;
+  --ink-dim: #514a60;
+  --ink-faint: #837a92;
+
+  --amber: #7c22d6;
+  --amber-strong: #611aad;
+  --teal: #5b5566;
+  --teal-strong: #362f42;
+  --danger: #c22a3d;
+  --danger-bg: rgba(194, 42, 61, 0.1);
+  --success: #1f8a54;
+
+  --glow-violet: 0 0 0 1px rgba(124, 34, 214, 0.25), 0 0 24px rgba(124, 34, 214, 0.15);
+}

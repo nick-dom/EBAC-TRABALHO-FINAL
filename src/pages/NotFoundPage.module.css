@@ -1,0 +1,40 @@
+.page {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: var(--sp-8) var(--sp-5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.code {
+  font-family: var(--font-mono);
+  color: var(--danger);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.1em;
+}
+
+.title {
+  font-size: var(--fs-xl);
+}
+
+.text {
+  color: var(--ink-dim);
+  margin-bottom: var(--sp-3);
+}
+
+.button {
+  display: inline-flex;
+  padding: var(--sp-3) var(--sp-6);
+  border-radius: var(--radius-sm);
+  background: var(--amber);
+  color: #14100a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  filter: brightness(1.08);
+}
